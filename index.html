@@ -31,7 +31,7 @@
         }
       }
       const socket = new WebSocket("ws://127.0.0.1:6086/00010002-0003-4004-8005-000600070008")
-      vc.log.log("log")
+
       socket.onmessage = function (event) {
 
 		  let msg = JSON.parse(event.data)
