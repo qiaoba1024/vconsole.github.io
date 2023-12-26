@@ -77,8 +77,9 @@ class RemoteDebugCocos {
                         args.push(e.value)
                     }
                 }
-
-                vc.log.addLog(msg.params.type, ...args)
+				args.push(msg.params.timestamp)
+				vc.log.addLogRemote(msg.params.type,...args)
+                //vc.log.addLog(msg.params.type, ...args)
 
             } else {
               
